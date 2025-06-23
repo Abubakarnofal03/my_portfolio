@@ -157,7 +157,7 @@ const Index = () => {
   };
 
   const openCV = () => {
-    window.open('/cv.pdf', '_blank');
+    window.open('Muhammad Abubakar AI cv.pdf', '_blank');
   };
 
   return (
