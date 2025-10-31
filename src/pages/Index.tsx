@@ -140,14 +140,11 @@ const Index = () => {
   const experience = [
     {
       company: 'NETSOL Technologies',
-      role: 'Software Engineering Intern',
-      period: 'June – August 2024',
+      role: 'Internship',
+      period: 'June 2024 – Aug 2024',
       achievements: [
-        'Built responsive Angular UIs that significantly improved application performance',
-        'Collaborated effectively in agile development teams with cross-functional expertise',
-        'Gained comprehensive hands-on experience with complete SDLC lifecycle',
-        'Participated in requirement analysis, testing, and deployment phases',
-        'Contributed to enterprise-level software solutions'
+        'Developed and optimized user interfaces using Angular, enhancing performance and user experience across key features.',
+        'Gained hands-on experience with the Software Development Life Cycle (SDLC), including requirement analysis, testing, and deployment.'
       ]
     }
   ];
