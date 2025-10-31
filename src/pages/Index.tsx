@@ -161,42 +161,35 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
+    <div className="min-h-screen relative">
       {/* Animated Navigation with Blur Effect */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        visibleSections.has('hero') 
-          ? 'bg-transparent' 
-          : 'bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-white/10'
-      }`}>
-        <div className="container mx-auto px-4 py-3 md:py-4">
-          <div className="flex justify-center">
-            <div className="flex flex-wrap justify-center gap-3 md:gap-6">
-              {[
-                { id: 'hero', label: 'Home' },
-                { id: 'education', label: 'Education' },
-                { id: 'experience', label: 'Experience' },
-                { id: 'skills', label: 'Skills' },
-                { id: 'projects', label: 'Projects' },
-                { id: 'contact', label: 'Contact' }
-              ].map((item, index) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`relative px-2 py-1 md:px-4 md:py-2 text-sm md:text-base font-medium transition-all duration-300 transform hover:scale-105 ${
-                    currentSection === item.id 
-                      ? 'text-neon-blue' 
-                      : 'text-white/70 hover:text-white'
-                  }`}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {item.label}
-                  {currentSection === item.id && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple animate-scale-in"></div>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
+      <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
+        {/* This div is the new "liquid glass pill" */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 bg-black/30 backdrop-blur-lg border border-white/10 rounded-full shadow-xl px-4 md:px-6 py-2">
+          {[
+            { id: 'hero', label: 'Home' },
+            { id: 'education', label: 'Education' },
+            { id: 'experience', label: 'Experience' },
+            { id: 'skills', label: 'Skills' },
+            { id: 'projects', label: 'Projects' },
+            { id: 'contact', label: 'Contact' }
+          ].map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`relative px-3 py-1 md:px-4 text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
+                currentSection === item.id
+                  ? 'text-neon-blue'
+                  : 'text-white/70 hover:text-white'
+              }`}
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {item.label}
+              {currentSection === item.id && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple animate-scale-in"></div>
+              )}
+            </button>
+          ))}
         </div>
       </nav>
 
