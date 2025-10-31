@@ -139,6 +139,15 @@ const Index = () => {
 
   const experience = [
     {
+      company: 'ACCOTECH',
+      role: 'Backend Developer',
+      period: 'July 2025 – Present',
+      achievements: [
+        'Built scalable backend systems using Supabase and Bubble.io, developing RESTful APIs and implementing authentication features.',
+        'Optimized data workflows and collaborated with the frontend team to improve system performance and user experience'
+      ]
+    },
+    {
       company: 'NETSOL Technologies',
       role: 'Internship',
       period: 'June 2024 – Aug 2024',
@@ -288,7 +297,7 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               {experience.map((exp, index) => (
-                <div key={index} className="space-y-4">
+                <div key={index} className="space-y-4 not-first:mt-6 not-first:pt-6 not-first:border-t not-first:border-white/10">
                   <div>
                     <h3 className="text-xl font-semibold text-white">{exp.company}</h3>
                     <p className="text-neon-purple font-medium">{exp.role}</p>
